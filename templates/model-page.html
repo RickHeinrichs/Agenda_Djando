@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "model-header.html" %} <!-Neste trecho vai incluir o conteudo do model-header->
+</head>
+<body>
+    {% block content %} {% endblock %} <!-A criacao do bloco infroma que qualquer conteudo sera inserido aqui. Abaixo do header e acima do footer->
+    {% include "model-footer.html" %} <!-Neste trecho vai incluir o conteudo do model-footer->
+</body>
+</html>
