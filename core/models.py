@@ -18,3 +18,6 @@ class Evento(models.Model):
 
     def get_data_evento(self):
         return self.data_evento.strftime('%A - %d/%m/%y - %H:%M') #Coloca a data no padrão brasileiro
+
+    def get_data_input_evento(self):
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M') #Converte para o padrao aceito pelo navegador

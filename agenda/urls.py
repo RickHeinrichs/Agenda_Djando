@@ -27,7 +27,8 @@ urlpatterns = [
     #path('', views.index) #Informa que se digitar sem o caminho traz a pagina index(funcao index)
     path('login/', views.login_user),
     path('agenda/evento/', views.evento),
-    path("agenda/evento/submit", views.submit_evento),
+    path('agenda/evento/submit', views.submit_evento),
+    path('agenda/evento/delete/<int:id_evento>/', views.delete_evento),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user)
 
