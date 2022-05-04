@@ -11,9 +11,13 @@
     <ul style="font-size: 18px">  <!- Elemento pai da lista. Aumenta a fonte em CSS->
     {% for evento in eventos %}
         <li>
-            {{ evento.titulo }} - {{evento.get_data_evento}}
-            (<a href="evento/?id={{ evento.id }}">Editar</a>
-            / <a href="evento/delete/{{ evento.id }}/">Excluir</a>)
+            <div style={% if evento.get_evento_atrasado %}
+                        "color:red"
+                        {% endif %}> <!-- Aplica cor se evento_atrasado for True -->
+                {{ evento.titulo }} - {{evento.get_data_evento}}
+                (<a href="evento/?id={{ evento.id }}">Editar</a>
+                / <a href="evento/delete/{{ evento.id }}/">Excluir</a>)
+            </div>
         </li> <!-'li' elemento de lista desorganizada->
     {% endfor %}
     </ul>

@@ -23,6 +23,7 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),
+    path('agenda/lista/<int:id_usuario>/', views.json_lista_evento),
     path('', RedirectView.as_view(url='/agenda/')), #Redireciona para a pagina solicitada
     #path('', views.index) #Informa que se digitar sem o caminho traz a pagina index(funcao index)
     path('login/', views.login_user),
